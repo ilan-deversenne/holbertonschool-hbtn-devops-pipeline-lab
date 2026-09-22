@@ -32,6 +32,7 @@ jobs:
       postgres:
         image: postgres:16-alpine
         env:
+          DATABASE_URL: postgres://pipeline:pipeline@db:5432/pipeline
           POSTGRES_USER: pipeline
           POSTGRES_PASSWORD: pipeline
           POSTGRES_DB: pipeline
