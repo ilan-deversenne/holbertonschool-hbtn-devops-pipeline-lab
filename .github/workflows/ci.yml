@@ -54,7 +54,7 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm it
+        run: npm ci
 
       - name: Run the unit tests
         run: npm run test:unit
