@@ -76,6 +76,9 @@ jobs:
 
       - name: Run the unit tests
         run: npm run test:unit
+        env:
+          JEST_JUNIT_OUTPUT_DIR: ./reports
+        run: npm test -- --reporters=default --reporters=jest-junit
 
       - name: Run the integration tests
         run: npm run test:integration
