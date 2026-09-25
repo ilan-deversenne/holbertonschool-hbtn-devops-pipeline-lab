@@ -90,7 +90,6 @@ jobs:
           path: ./reports/
           retention-days: 7
 
-
   build:
     name: Build
     needs: test
@@ -99,8 +98,6 @@ jobs:
     permissions:
       contents: read
       packages: write
-
-  #https://docs.github.com/en/actions/tutorials/publish-packages/publish-docker-images
     steps:
       - name: Check out the repo
         uses: actions/checkout@v6
