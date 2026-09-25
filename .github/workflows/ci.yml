@@ -87,5 +87,5 @@ jobs:
         if: always()
         with:
           name: test-reports
-          path: reports/
+          path: ./reports/
           retention-days: 7
