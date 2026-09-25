@@ -101,7 +101,7 @@ jobs:
       packages: write
 
   #https://docs.github.com/en/actions/tutorials/publish-packages/publish-docker-images
-    setps:
+    steps:
       - name: Check out the repo
         uses: actions/checkout@v6
 
