@@ -116,7 +116,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: ghcr.io/${{ github.repository }}
+          images: ghcr.io/${{ github.repository }}:${{ github.sha }}
 
       - name: Build and push Docker image
         id: push
@@ -133,6 +133,6 @@ jobs:
       - name: Generate artifact attestation
         uses: actions/attest@v4
         with:
-          subject-name: ghcr.io/${{ github.repository }}:${{ github.sha }}
+          subject-name: ghcr.io/${{ github.repository }}:latest
           subject-digest: ${{ steps.push.outputs.digest }}
           push-to-registry: true
